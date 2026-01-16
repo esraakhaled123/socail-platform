@@ -11,7 +11,7 @@ import {
   FooterLinkGroup,
   FooterTitle,
 } from "flowbite-react";
-import { BsDribbble, BsFacebook, BsGithub, BsInstagram, BsTwitter } from "react-icons/bs";
+import { BsBriefcaseFill, BsDribbble, BsFacebook, BsGithub, BsInstagram, BsStars, BsTwitter } from "react-icons/bs";
 import { MdContactPage } from "react-icons/md";
 import { Link } from "react-router-dom";
 
@@ -55,11 +55,16 @@ export default function AppFooter() {
         <div className="w-full sm:flex sm:items-center sm:justify-between">
           <FooterCopyright  by="Esraa khaled" year={2026} />
           <div className="mt-4 flex space-x-6 sm:mt-0 sm:justify-center">
-            <FooterIcon href="https://www.facebook.com/profile.php?id=100057002292614"   target="_blank" icon={BsFacebook} />
-            <FooterIcon href="https://www.instagram.com/esraa_khaled260/?hl=en"   target="_blank" icon={BsInstagram} />
-            <FooterIcon href="https://x.com/EsraaKhaleddev8"   target="_blank" icon={BsTwitter} />
+            <FooterIcon 
+  href='https://my-portfolio-one-sigma-85.vercel.app/'
+  target="_blank" 
+  icon={BsStars} 
+/>
             <FooterIcon href="https://github.com/esraakhaled123"   target="_blank" icon={BsGithub} />
 
+           
+         
+        
        
           </div>
         </div>

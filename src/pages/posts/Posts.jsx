@@ -6,6 +6,7 @@ import Add from '../../components/posts/Add';
 import useFetch from '../../Hooks/useFetch';
 import { AuthContext } from '../../components/Context/AuthContext';
 import { Helmet } from 'react-helmet';
+import axios from 'axios';
 
 export default function Posts() {
    const {userData} =useContext(AuthContext)
@@ -14,6 +15,14 @@ export default function Posts() {
   const{data , isLoading  ,error , refetchData}=useFetch(['posts'] ,`posts?limit=40&sort=-createdAt`,userData)
   //  const post = data?.data?.post
 console.log(data);
+
+// async function getalldata(){
+//   try {
+//      const {data}= axios.get(`${import.meta.env.VITE_BASE_URL}/,`)
+//   } catch (error) {
+    
+//   }
+// }
   return <>
   <Helmet>
     <title>Home</title>
