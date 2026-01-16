@@ -3,7 +3,7 @@ import React from 'react'
 
 export default function AppButton({children , isloading , disabled }) {
   return (
-     <Button  type="submit" className='cursor-pointer' disabled ={disabled}>
+     <Button  type="submit" className='cursor-pointer mt-1' disabled ={disabled}>
         {isloading && <Spinner
          size="sm" 
          aria-label="Info spinner example" 

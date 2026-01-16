@@ -4,7 +4,7 @@ import axios from 'axios';
 import { Alert, Button, Datepicker, Label, Radio, TextInput } from 'flowbite-react'
 import React, { useState } from 'react'
 import { useForm } from 'react-hook-form'
-import { useNavigate } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import * as z from "zod";
 import AppButton from '../../../components/shared/Appbutton/AppButton';
 import { HiInformationCircle } from 'react-icons/hi';
@@ -220,6 +220,13 @@ const inputs = [
   )}
 </div>
   <AppButton disabled ={isSubmitting} isloading = {isSubmitting}>Register</AppButton>
+  <span className="text-gray-400 text-center mt-2 ">
+ <span className="text-sm"> Do you have account? </span>
+  <Link to="/login" className="text-blue-500 hover:underline ml-1">
+    login
+  </Link>
+</span>
+
      {ApiError && <Alert  color="failure" icon={HiInformationCircle}>
       <span className="font-medium">{ApiError}</span>
     </Alert>}

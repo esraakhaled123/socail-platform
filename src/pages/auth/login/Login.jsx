@@ -3,7 +3,7 @@ import axios from "axios";
 import { Alert, Button, Checkbox, Label, TextInput } from "flowbite-react";
 import {   useState } from "react";
 import { useForm } from "react-hook-form";
-import { useNavigate } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import * as z from "zod";
 import AppButton from "../../../components/shared/Appbutton/AppButton";
 import { HiInformationCircle } from "react-icons/hi";
@@ -93,7 +93,7 @@ const passwordRegex =
   return (
     <>
       <Helmet>
-    <title>profile</title>
+    <title>Login</title>
   </Helmet>
     <section className='py-12   '>
          <div className="container">
@@ -119,6 +119,7 @@ const passwordRegex =
          
    {/* دي اسمها Bracket Notation
    ومش معناها Array خالص  */}
+
    
         {errors[name] && (
          <p className="text-red-600 text-sm text-center m-3">
@@ -127,9 +128,16 @@ const passwordRegex =
        )}
        </div>
      ))}
- 
+  
    
         <AppButton disabled={isSubmitting} isloading={isSubmitting}>Login</AppButton>
+          <span className="text-gray-400 text-center mt-2 ">
+ <span className="text-sm"> Don't have an account? </span>
+  <Link to="/register" className="text-blue-500 hover:underline ml-1">
+    register
+  </Link>
+</span>
+
         {ApiError && <Alert  color="failure" icon={HiInformationCircle}>
               <span className="font-medium">{ApiError}</span>
             </Alert>}
