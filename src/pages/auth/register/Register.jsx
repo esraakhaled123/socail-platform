@@ -221,7 +221,7 @@ const inputs = [
 </div>
   <AppButton disabled ={isSubmitting} isloading = {isSubmitting}>Register</AppButton>
   <span className="text-gray-400 text-center mt-2 ">
- <span className="text-sm"> Do you have account? </span>
+ <span className="text-sm"> Do you have an account? </span>
   <Link to="/login" className="text-blue-500 hover:underline ml-1">
     login
   </Link>
