@@ -1,0 +1,55 @@
+ @import "tailwindcss";
+@import "flowbite-react/plugin/tailwindcss";
+@source "../.flowbite-react/class-list.json"; 
+
+@import url('https://fonts.googleapis.com/css2?family=Playwrite+PL:wght@100..400&family=Rubik:ital,wght@0,300..900;1,300..900&display=swap');
+
+@custom-variant dark (&:where(.dark &));
+
+
+/*  */
+
+@theme{
+  --font-logo : "Playwrite PL", cursive;
+  --font-primary : "Rubik", sans-serif;
+
+}
+
+@layer base{
+  body{
+    @apply font-primary
+  }
+h1,h2,h3 ,h4 ,h5, h6{
+  @apply  font-bold
+}
+
+h1 {
+  @apply text-3xl
+}
+h2 {
+  @apply text-2xl
+}
+/* section {
+  @apply py-12
+} */
+}
+
+@layer utilities{
+  .logo{
+    @apply font-logo
+  }
+  .container{
+    @apply mx-auto px-4 sm:px-6 lg:px-28
+  }
+}
+
+[data-testid="flowbite-footer"] {
+  border-radius: 0 !important; 
+}
+
+.avatar *{
+        @apply size-full object-cover
+}
+section:not([aria-label^="Notifications alt+T"]) {
+  padding: 12px 0;
+}
