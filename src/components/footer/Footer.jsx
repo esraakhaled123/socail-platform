@@ -56,7 +56,7 @@ export default function AppFooter() {
           <FooterCopyright  by="Esraa khaled" year={2026} />
           <div className="mt-4 flex space-x-6 sm:mt-0 sm:justify-center">
             <FooterIcon 
-  href='my-portfolio-hitc.vercel.app'
+  href='https://my-portfolio-hitc.vercel.app/'
   target="_blank" 
   icon={BsStars} 
 />
